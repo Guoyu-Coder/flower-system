@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ai.learning</groupId>
+        <artifactId>ai-learning-platform</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>ai-learning-business</artifactId>
+    <packaging>jar</packaging>
+    <name>业务模块</name>
+    <description>核心业务模块</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ai.learning</groupId>
+            <artifactId>ai-learning-common</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.ai.learning</groupId>
+            <artifactId>ai-learning-agent</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>

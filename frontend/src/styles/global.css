@@ -1,0 +1,183 @@
+/* ========== 全局粉色主题样式 ========== */
+:root {
+  --pink-primary: #ff6b81;
+  --pink-light: #ffb6c1;
+  --pink-lighter: #ffe4e9;
+  --pink-dark: #ff4757;
+  --pink-bg: #fff5f7;
+  --white: #ffffff;
+  --text-primary: #2c3e50;
+  --text-secondary: #606266;
+  --text-light: #999;
+  --border-color: #f0d6dc;
+  --shadow: 0 2px 12px rgba(255, 107, 129, 0.1);
+  --shadow-hover: 0 4px 20px rgba(255, 107, 129, 0.2);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--pink-bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Element Plus 粉色主题覆盖 */
+.el-button--primary {
+  --el-button-bg-color: var(--pink-primary);
+  --el-button-border-color: var(--pink-primary);
+  --el-button-hover-bg-color: var(--pink-dark);
+  --el-button-hover-border-color: var(--pink-dark);
+  --el-button-active-bg-color: var(--pink-dark);
+}
+
+.el-button--primary.is-plain {
+  --el-button-bg-color: var(--pink-lighter);
+  --el-button-border-color: var(--pink-light);
+  --el-button-hover-bg-color: var(--pink-primary);
+  --el-button-hover-border-color: var(--pink-primary);
+}
+
+.el-tabs__item.is-active {
+  color: var(--pink-primary) !important;
+}
+
+.el-tabs__active-bar {
+  background-color: var(--pink-primary) !important;
+}
+
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: var(--pink-primary);
+}
+
+.el-tag--primary {
+  --el-tag-bg-color: var(--pink-lighter);
+  --el-tag-border-color: var(--pink-light);
+  --el-tag-text-color: var(--pink-primary);
+}
+
+.el-card {
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.el-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* 自定义粉色滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pink-lighter);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pink-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink-primary);
+}
+
+/* 页面容器 */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 粉色渐变背景 */
+.pink-gradient {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f, #ffecd2);
+}
+
+/* 卡片悬浮效果 */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* 价格字体 */
+.price {
+  color: var(--pink-primary);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.original-price {
+  color: var(--text-light);
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* 粉色按钮 */
+.btn-pink {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-dark));
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 24px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.btn-pink:hover {
+  box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4);
+  transform: translateY(-1px);
+}
+
+/* 圆角图片 */
+.rounded-image {
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+/* 粉白卡片 */
+.pink-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+/* 导航栏粉色 */
+.navbar-pink {
+  background: linear-gradient(135deg, #ff6b81, #ff4757) !important;
+  box-shadow: 0 2px 10px rgba(255, 107, 129, 0.3);
+}
+
+/* 加载动画 */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
