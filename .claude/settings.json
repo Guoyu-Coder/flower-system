@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git --no-pager log --all --oneline --graph)",
+      "Bash(git --no-pager show ac68ba8 -- backend/**/application*.yml backend/**/application*.yaml)",
+      "Bash(git --no-pager show HEAD -- backend/**/application*.yml)"
+    ]
+  }
+}

@@ -76,13 +76,13 @@ docker-compose logs -f backend
 
 ```env
 # MySQL 配置
-MYSQL_ROOT_PASSWORD=REMOVED
+MYSQL_ROOT_PASSWORD=your-mysql-root-password
 MYSQL_DATABASE=flower_shop
 MYSQL_USER=flower_user
-MYSQL_PASSWORD=REMOVED
+MYSQL_PASSWORD=your-mysql-password
 
 # JWT 密钥
-JWT_SECRET=flower-shop-jwt-secret-key-2026
+JWT_SECRET=your-jwt-secret-key
 
 # 服务端口
 FRONTEND_PORT=80
@@ -224,7 +224,7 @@ npm run dev
 端口: 3306
 数据库: flower_shop
 用户名: flower_user
-密码: REMOVED_DB_PASSWORD
+密码: (请在 .env 文件中配置)
 ```
 
 ### Redis连接信息

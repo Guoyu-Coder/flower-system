@@ -1368,7 +1368,7 @@ main          - 主分支（生产环境）
 
 | 变量名 | 说明 | 示例 |
 |--------|------|------|
-| MYSQL_PASSWORD | MySQL密码 | REMOVED |
+| MYSQL_PASSWORD | MySQL密码 | your-password |
 | JWT_SECRET | JWT密钥 | your-secret-key |
 | DEEPSEEK_API_KEY | DeepSeek API密钥 | your-api-key |
 

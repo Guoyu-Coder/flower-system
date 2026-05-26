@@ -19,8 +19,8 @@
 请确保以下配置项正确填写：
 
 ```env
-# DeepSeek API配置（已配置好）
-DEEPSEEK_API_KEY=REMOVED_API_KEY
+# DeepSeek API配置
+DEEPSEEK_API_KEY=your-deepseek-api-key
 DEEPSEEK_API_URL=https://api.deepseek.com/v1/chat/completions
 DEEPSEEK_MODEL=deepseek-chat
 
@@ -28,16 +28,16 @@ DEEPSEEK_MODEL=deepseek-chat
 DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=flower_shop
-DB_USERNAME=root
-DB_PASSWORD=REMOVED
+DB_USERNAME=your-db-username
+DB_PASSWORD=your-db-password
 
 # Redis配置（用于AI对话上下文记忆）
 REDIS_HOST=localhost
 REDIS_PORT=6379
-REDIS_PASSWORD=
+REDIS_PASSWORD=your-redis-password
 
 # JWT密钥配置
-JWT_SECRET=REMOVED_JWT_SECRET
+JWT_SECRET=your-jwt-secret-key
 
 # 服务器端口
 SERVER_PORT=8088
@@ -55,7 +55,7 @@ DEEPSEEK_API_KEY=你的真实API-Key
 
 ### 3. 修改 MySQL 数据库密码
 
-如果你的 MySQL 密码不是 `REMOVED`，请修改：
+如果你的 MySQL 密码不是默认值，请修改：
 
 ```env
 DB_PASSWORD=你的MySQL密码

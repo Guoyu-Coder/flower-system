@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
 
 spring:
   application:
@@ -7,14 +7,14 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ai_learning?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
-    username: root
-    password: REMOVED_DB_PASSWORD
+    url: ${DB_URL:jdbc:mysql://localhost:3306/ai_learning?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
 
   redis:
-    host: localhost
-    port: 6379
-    password:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:}
     database: 0
     timeout: 10000
 
@@ -30,13 +30,13 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 jwt:
-  secret: REMOVED_JWT_SECRET
+  secret: ${JWT_SECRET:}
   expiration: 7200000
 
 deepseek:
-  api-key: REMOVED_API_KEY
-  api-url: https://api.deepseek.com/v1
-  model: deepseek-chat
+  api-key: ${DEEPSEEK_API_KEY:}
+  api-url: ${DEEPSEEK_API_URL:https://api.deepseek.com/v1}
+  model: ${DEEPSEEK_MODEL:deepseek-chat}
 
 logging:
   level:
