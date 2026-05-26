@@ -429,7 +429,7 @@ CREATE TABLE IF NOT EXISTS sys_banner (
 
 -- ==================== 初始化数据 ====================
 
--- 插入管理员账号 (密码: admin123)
+-- 插入管理员账号 (密码: 请在部署后通过管理后台修改)
 INSERT INTO sys_user (username, password, real_name, role, status) VALUES
 ('admin', '0192023a7bbd73250516f069df18b500', '系统管理员', 'admin', 1);
 

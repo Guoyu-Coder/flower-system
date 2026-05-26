@@ -25,7 +25,7 @@ import { adminApi } from '@/api'
 import { ElMessage } from 'element-plus'
 
 const router = useRouter()
-const form = ref({ username: 'admin', password: 'admin123' })
+const form = ref({ username: '', password: '' })
 const loading = ref(false)
 
 async function login() {

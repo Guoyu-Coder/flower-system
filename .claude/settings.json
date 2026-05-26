@@ -3,7 +3,28 @@
     "allow": [
       "Bash(git --no-pager log --all --oneline --graph)",
       "Bash(git --no-pager show ac68ba8 -- backend/**/application*.yml backend/**/application*.yaml)",
-      "Bash(git --no-pager show HEAD -- backend/**/application*.yml)"
+      "Bash(git --no-pager show HEAD -- backend/**/application*.yml)",
+      "Bash(git --no-pager log --oneline -10)",
+      "Bash(git --no-pager log --all --oneline -- backend/ai-learning-platform/ai-learning-system/src/main/resources/application.yml)",
+      "Bash(git --no-pager log --oneline --all)",
+      "Bash(git filter-branch -f --tree-filter ' *)",
+      "Bash(git stash *)",
+      "Bash(FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --tree-filter ' *)",
+      "Bash(git checkout *)",
+      "Bash(git --no-pager log --all -p -- **/application*.yml)",
+      "Bash(git --no-pager log main --oneline -10)",
+      "Bash(git filter-branch *)",
+      "Bash(git --no-pager log main -p -- **/application*.yml)",
+      "Bash(xargs -r git update-ref -d)",
+      "Bash(git reflog *)",
+      "Bash(git gc *)",
+      "Bash(git --no-pager log -p --all)",
+      "Bash(git --no-pager log main -p)",
+      "Bash(git restore *)",
+      "Bash(git push *)",
+      "Bash(docker --version)",
+      "Bash(docker compose *)",
+      "Bash(docker-compose --version)"
     ]
   }
 }
