@@ -8,9 +8,9 @@ spring:
   # 数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/flower_shop?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
-    username: root
-    password: REMOVED_DB_PASSWORD
+    url: ${DB_URL:jdbc:mysql://localhost:3306/flower_shop?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
 
   # Redis配置
   data:
@@ -56,7 +56,7 @@ logging:
 # DeepSeek AI配置
 deepseek:
   api:
-    key: ${DEEPSEEK_API_KEY:REMOVED_API_KEY}
+    key: ${DEEPSEEK_API_KEY:}
     url: ${DEEPSEEK_API_URL:https://api.deepseek.com/v1/chat/completions}
   model: ${DEEPSEEK_MODEL:deepseek-chat}
   max-tokens: 1024
@@ -64,5 +64,5 @@ deepseek:
 
 # JWT配置
 jwt:
-  secret: REMOVED_JWT_SECRET
+  secret: ${JWT_SECRET:}
   expiration: 1800000  # 30分钟（30 * 60 * 1000）
