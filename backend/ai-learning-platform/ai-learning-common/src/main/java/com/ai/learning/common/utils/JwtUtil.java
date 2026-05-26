@@ -14,7 +14,7 @@ import java.util.Map;
 @Slf4j
 public class JwtUtil {
 
-    private static String SECRET = "REMOVED_JWT_SECRET";
+    private static String SECRET = System.getenv().getOrDefault("JWT_SECRET", "");
     private static long EXPIRE_TIME = 7 * 24 * 60 * 60 * 1000L;
 
     public static void setSecret(String secret) {

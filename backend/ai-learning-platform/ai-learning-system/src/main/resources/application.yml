@@ -9,7 +9,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ai_learning_platform?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
-    password: REMOVED_DB_PASSWORD
+    password: ${DB_PASSWORD:}
 
   redis:
     host: localhost
@@ -52,7 +52,7 @@ deepseek:
   max_tokens: ${DEEPSEEK_MAX_TOKENS:2000}
 
 jwt:
-  secret: REMOVED_JWT_SECRET
+  secret: ${JWT_SECRET:}
   expire_time: 604800
 
 logging:

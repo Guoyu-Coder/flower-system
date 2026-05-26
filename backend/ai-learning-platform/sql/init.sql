@@ -446,7 +446,7 @@ INSERT INTO sys_config (config_key, config_value, config_name, config_group, dat
 ('exam.default_duration', '120', '默认考试时长(分钟)', 'exam', 'number', '默认考试时长'),
 ('exam.default_total_score', '100', '默认总分', 'exam', 'number', '默认考试总分'),
 ('exam.default_passing_score', '60', '默认及格分', 'exam', 'number', '默认及格分数'),
-('jwt.secret', 'REMOVED_JWT_SECRET', 'JWT密钥', 'security', 'string', 'JWT签名密钥'),
+('jwt.secret', '${JWT_SECRET}', 'JWT密钥', 'security', 'string', 'JWT签名密钥'),
 ('jwt.expire_time', '604800', 'Token过期时间(秒)', 'security', 'number', 'JWT Token过期时间，默认7天');
 
 -- 插入示例学科
